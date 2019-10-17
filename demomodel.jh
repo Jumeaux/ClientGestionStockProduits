@@ -1,0 +1,60 @@
+entity Book {
+	bookTitle String
+    description String
+    datePublication: LocalDate
+   
+}
+
+entity Author {
+	authorName String
+    authorAddress String
+}
+
+// an ignored comment
+/** not an ignored comment */
+
+
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+
+
+/**
+ * The Employee entity.
+ */
+
+
+
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Author{book} to Book,
+	/**
+	* A relationship
+	*/
+}
+
+
+
+
+
+// Set pagination options
+
+paginate Author, Book with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
